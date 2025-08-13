@@ -23,7 +23,9 @@ namespace Sistema_de_Gestion_de_Tickets
 
         protected void btnVerTarea_Click(object sender, EventArgs e)
         {
-
+            Button btnVerTarea = (Button)sender;
+            int Id = int.Parse(btnVerTarea.CommandArgument);
+            Response.Redirect("TareaDetalle.aspx?Id=" + Id ,false);
         }
     }
 }

@@ -73,5 +73,11 @@ namespace Negocio
                 lector.Close();
             conexion.Close();
         }
+
+        public void setearProcedure(String Sp)
+        {
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandText = Sp;
+        }
     }
 }
